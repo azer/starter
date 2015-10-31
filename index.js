@@ -13,14 +13,7 @@ var Starter = struct({
   variables: variables
 });
 
-module.exports = NewStarter;
-module.exports.Starter = Starter;
-
-function NewStarter () {
-  return Starter({
-    name: 'unknown-starter'
-  });
-}
+module.exports = Starter;
 
 function prefix (starter, str, obj) {
   return starter.project.prefix('kik:' + str, obj);
