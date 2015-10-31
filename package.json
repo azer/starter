@@ -1,6 +1,6 @@
 {
   "name": "kik-starter",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Base starter module for kik",
   "main": "index.js",
   "scripts": {
