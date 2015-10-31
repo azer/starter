@@ -1,0 +1,28 @@
+{
+  "name": "kik-starter",
+  "version": "0.0.0",
+  "description": "Base starter module for kik",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "kik",
+    "starter"
+  ],
+  "repository": {
+    "url": "git@github.com:azer/kik-starter.git",
+    "type": "git"
+  },
+  "author": "azer",
+  "license": "BSD",
+  "dependencies": {
+    "format-text": "0.0.3",
+    "fs": "0.0.2",
+    "local-debug": "0.0.0",
+    "mix-objects": "0.0.3",
+    "new-struct": "^0.1.1",
+    "path": "^0.12.7",
+    "serial-loop": "0.0.1"
+  }
+}
