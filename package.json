@@ -23,6 +23,10 @@
     "mix-objects": "0.0.3",
     "new-struct": "^0.1.1",
     "path": "^0.12.7",
-    "serial-loop": "0.0.1"
+    "serial-loop": "0.0.1",
+    "serially": "^1.0.1"
+  },
+  "devDependencies": {
+    "prova": "^2.1.2"
   }
 }
