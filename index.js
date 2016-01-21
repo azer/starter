@@ -8,6 +8,7 @@ var path = require("path");
 var fs = require("fs");
 var mix = require("mix-objects");
 var serially = require("serially");
+var parallelly = require("parallelly");
 
 class Starter {
   constructor (name, project, folder, form) {
