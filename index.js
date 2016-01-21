@@ -18,7 +18,7 @@ class Starter {
     this.form = form;
   }
 
-  copy (folder, callback) {
+  copy (callback) {
     debug('Copying from starter "%s" to project "%s"', this.folder, this.targetFolder());
     this.project.exec('cp -r {0}/. {1}/.', this.folder, this.targetFolder(), callback);
   }
@@ -51,7 +51,12 @@ class Starter {
     }
   }
 
-  render (files, callback) {
+  render (files) {
+    var callback = arguments[arguments.length - 1];
+    if (!Array.isArray(files)) {
+      files = Array.prototype.slice.call(arguments, 0, arguments.length - 1);
+    }
+
     var self = this;
     loop(files.length, each, callback);
 
@@ -68,11 +73,11 @@ class Starter {
   }
 
   serial() {
-    return serially(this);
+    return serially({ context: this });
   }
 
   parallel() {
-    return parallelly(this);
+    return parallelly({ context: this });
   }
 
   targetFolder () {
