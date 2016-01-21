@@ -22,8 +22,9 @@
     "local-debug": "0.0.0",
     "mix-objects": "0.0.3",
     "new-struct": "^0.1.1",
+    "parallelly": "^0.1.0",
     "path": "^0.12.7",
     "serial-loop": "0.0.1",
-    "serially": "^1.0.1"
+    "serially": "^1.1.0"
   }
 }

@@ -19,7 +19,7 @@ class Starter {
 
   copy (folder, callback) {
     debug('Copying from starter "%s" to project "%s"', this.folder, this.targetFolder());
-    this.project.exec('cp -r {0}/. {1}/.', folder, this.targetFolder(), callback);
+    this.project.exec('cp -r {0}/. {1}/.', this.folder, this.targetFolder(), callback);
   }
 
   format (text, context) {
@@ -30,6 +30,10 @@ class Starter {
     }
 
     return formatText(text, formatVars(vars));
+  }
+
+  prefix (str, obj) {
+    return this.project.prefix('kik:' + str, obj);
   }
 
   rename (map, callback) {
@@ -62,8 +66,12 @@ class Starter {
     }
   }
 
-  prefix (str, obj) {
-    return this.project.prefix('kik:' + str, obj);
+  serial() {
+    return serially(this);
+  }
+
+  parallel() {
+    return parallelly(this);
   }
 
   targetFolder () {
