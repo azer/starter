@@ -38,12 +38,13 @@ class Starter {
   }
 
   rename (map, callback) {
+    var self = this;
     var targets = Object.keys(map);
     loop(targets.length, each, callback);
 
     function each (done, index) {
-      var from = path.join(this.targetFolder(), targets[index]);
-      var to = path.join(this.targetFolder(), this.format(map[targets[index]]));
+      var from = path.join(self.targetFolder(), targets[index]);
+      var to = path.join(self.targetFolder(), self.format(map[targets[index]]));
 
       debug('Renaming %s to %s', from, to);
 
