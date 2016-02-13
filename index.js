@@ -9,15 +9,9 @@ var fs = require("fs");
 var mix = require("mix-objects");
 var serially = require("serially");
 var parallelly = require("parallelly");
+var install = require("install-module");
 
 class Starter {
-  constructor (name, project, folder, form) {
-    this.name = name;
-    this.project = project;
-    this.folder = folder;
-    this.form = form;
-  }
-
   copy (callback) {
     debug('Copying from starter "%s" to project "%s"', this.folder, this.targetFolder());
     this.project.exec('cp -r {0}/. {1}/.', this.folder, this.targetFolder(), callback);
@@ -49,6 +43,19 @@ class Starter {
       debug('Renaming %s to %s', from, to);
 
       fs.rename(from, to, done);
+    }
+  }
+
+  remove (targets, callback) {
+    var self = this;
+    loop(targets.length, each, callback);
+
+    function each (done, index) {
+      var filename = path.join(self.targetFolder(), targets[index]);
+
+      debug('Removing %s', filename);
+
+      fs.unlink(filename, done);
     }
   }
 
@@ -95,6 +102,18 @@ class Starter {
 
     return mix(p, [s]);
   }
+
+  installModules (modules, callback) {
+    if (modules.length == 0) return callback();
+    debug('Installing starter dependencies: %s', modules.join(', '));
+    install(modules, { cwd: this.targetFolder() }, callback);
+  }
+
+  runNPMInstall (callback) {
+    debug('Running npm install on the project directory. It may take some time depending on your speed.');
+    this.project.exec('npm install', callback);
+  }
+
 }
 
 function formatVars (obj) {

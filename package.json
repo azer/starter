@@ -19,6 +19,7 @@
   "dependencies": {
     "format-text": "0.0.3",
     "fs": "0.0.2",
+    "install-module": "^1.1.0",
     "local-debug": "0.0.0",
     "mix-objects": "0.0.3",
     "new-struct": "^0.1.1",
