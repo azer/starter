@@ -1,13 +1,13 @@
-## kik-starter
+## hek-starter
 
 Base starter module for kik
 
 ## Install
 
 ```bash
-$ npm install kik-starter
+$ npm install hek-starter
 ```
 
 ## Usage
 
-See [kik/examples/npm-starter](http://github.com/azer/kik/tree/master/examples/npm-starter) for an example.
+See [hek/examples/npm-starter](http://github.com/hek/hek/tree/master/examples/npm-starter) for an example.
