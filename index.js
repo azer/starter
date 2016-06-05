@@ -1,7 +1,6 @@
 "use strict";
 
 var debug = require("local-debug")('starter');
-var struct = require("new-struct");
 var loop = require("serial-loop");
 var formatText = require("format-text");
 var path = require("path");
@@ -28,7 +27,7 @@ class Starter {
   }
 
   prefix (str, obj) {
-    return this.project.prefix('kik:' + str, obj);
+    return this.project.prefix('hek:' + str, obj);
   }
 
   rename (map, callback) {

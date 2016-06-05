@@ -1,31 +1,27 @@
 {
-  "name": "kik-starter",
-  "version": "2.2.0",
-  "description": "Base starter module for kik",
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "Base starter module for hek",
   "main": "index.js",
   "scripts": {
     "test": "node test"
   },
-  "keywords": [
-    "kik",
-    "starter"
-  ],
   "repository": {
-    "url": "git@github.com:azer/kik-starter.git",
+    "url": "git@github.com:hek/starter.git",
     "type": "git"
   },
   "author": "azer",
   "license": "BSD",
   "dependencies": {
-    "format-text": "0.0.3",
+    "format-text": "azer/format-text",
     "fs": "0.0.2",
-    "install-module": "^1.1.0",
+    "install-module": "azer/install-module",
     "local-debug": "0.0.0",
-    "mix-objects": "0.0.3",
-    "new-struct": "^0.1.1",
-    "parallelly": "^0.1.0",
+    "mix-objects": "azer/mix-objects",
+    "parallelly": "azer/parallelly",
     "path": "^0.12.7",
-    "serial-loop": "0.0.1",
-    "serially": "^1.1.0"
+    "serial-loop": "azer/serial-loop",
+    "serially": "azer/serially"
+
   }
 }

@@ -1,11 +1,11 @@
-## hek-starter
+## starter
 
-Base starter module for kik
+Base starter module for [hek](http://github.com/hek/hek)
 
 ## Install
 
 ```bash
-$ npm install hek-starter
+$ npm install hek/starter
 ```
 
 ## Usage
